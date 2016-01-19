@@ -1,1 +1,17 @@
-hello
+<h1 class="page-header">Create a new team</h1>
+<%= form_tag collections_path do %>
+  <div class="form-group">
+    <%= label_tag(:hashtag, "Hash Tag ") %>
+    <%= text_field_tag(:hashtag, nil, class: "form-control") %>    
+  </div>
+  <div class="form-group">
+    <%= label_tag(:start_time, "Start Time ") %>
+    <%= date_field_tag(:start_time, nil, class: "form-control") %>    
+  </div>
+  <div class="form-group">
+    <%= label_tag(:end_time, "End Time ") %>
+    <%= date_field_tag(:end_time, nil, class: "form-control")%>    
+  </div>
+
+  <%= submit_tag("Go", class: "btn btn-success center-block") %>
+<% end %>
