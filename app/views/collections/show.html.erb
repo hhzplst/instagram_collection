@@ -1,0 +1,11 @@
+<h1>Result for #<%= @tag.name %></h1>
+
+<h3><%= link_to "Go Back", all_collections_path %></h3> 
+
+<% @collections.each do |collection| %>
+  <div class="jumbotron text-center">
+    <p>Username: <%= collection.username %></p>
+    <img src=" <%= collection.image %> ">
+    <p><%= link_to "See Original Post", collection.link %></p>
+  </div>
+<% end %>

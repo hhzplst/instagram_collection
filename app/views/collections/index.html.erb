@@ -1,13 +1,14 @@
-<h1>All Collections</h1>
+<h1 class="text-center">All Collections</h1><br>
   
-<% @collections.each do |collection| %>
-  <div>
-    <p><%= collection.username %></p>
-    <a href="<%= collection.link %>"></a>
-    <p><%= collection.created_time %></p>
-    <img src=" <%= collection.image %> ">
-  </div>
+<% @tags.each do |tag| %>
+<div class="jumbotron alert-warning text-center">
+  <p>Search Result for #<%= tag.name %></p>
+  <%= link_to "See Collection", show_collection_path(tag), class:"btn btn-danger"%>
+</div>
 <% end %>
 
-<%= link_to "Add Collection", new_collection_path, class:"btn btn-primary"%>
+<%= link_to "Add Collection", new_collection_path, class:"btn btn-primary center-block"%>
+
+
+
 
