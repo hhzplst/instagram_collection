@@ -1,4 +1,13 @@
 <h1>All Collections</h1>
+  
+<% @collections.each do |collection| %>
+  <div>
+    <p><%= collection.username %></p>
+    <a href="<%= collection.link %>"></a>
+    <p><%= collection.created_time %></p>
+    <img src=" <%= collection.image %> ">
+  </div>
+<% end %>
 
 <%= link_to "Add Collection", new_collection_path, class:"btn btn-primary"%>
 
